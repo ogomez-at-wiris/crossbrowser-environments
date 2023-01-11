@@ -1,3 +1,6 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 export const config = {
     runner: 'local',
     specs: [
@@ -7,18 +10,26 @@ export const config = {
     ],
     maxInstances: 10,
     capabilities: [{
-
         maxInstances: 5,
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        acceptInsecureCerts: true,
+        'bstack:options': {
+            os: 'Windows',
+            osVersion: '10',
+        },
     }],
     logLevel: 'warn',
     bail: 0,
     waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
-    services: ['chromedriver'],
+    user: process.env.BROWSERSTACK_USERNAME,
+    key: process.env.BROWSERSTACK_ACCESS_KEY,
 
+    services: [
+        ['browserstack', {
+        }]
+    ],
     framework: 'mocha',
     reporters: ['spec'],
 
