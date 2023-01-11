@@ -3,6 +3,8 @@ dotenv.config();
 
 export const config = {
     runner: 'local',
+    user: process.env.LT_USERNAME,
+    key: process.env.LT_ACCESS_KEY,
     specs: [
         './test/specs/**/*.js'
     ],
@@ -25,10 +27,9 @@ export const config = {
     connectionRetryCount: 3,
     user: process.env.BROWSERSTACK_USERNAME,
     key: process.env.BROWSERSTACK_ACCESS_KEY,
-
     services: [
-        ['browserstack', {
-        }]
+        ['lambdatest',
+        ]
     ],
     framework: 'mocha',
     reporters: ['spec'],
