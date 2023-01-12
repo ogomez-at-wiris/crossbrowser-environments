@@ -23,11 +23,11 @@ export const config = {
     waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
-    user: process.env.BROWSERSTACK_USERNAME,
-    key: process.env.BROWSERSTACK_ACCESS_KEY,
-
+    user: process.env.SAUCE_USERNAME,
+    key: process.env.SAUCE_ACCESS_KEY,
+    region: 'eu', // or 'us' or 'apac'
     services: [
-        ['browserstack', {
+        ['sauce', {
         }]
     ],
     framework: 'mocha',
