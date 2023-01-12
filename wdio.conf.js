@@ -12,13 +12,9 @@ export const config = {
     ],
     maxInstances: 10,
     capabilities: [{
-        maxInstances: 5,
+        maxInstances: 1,
         browserName: 'chrome',
         acceptInsecureCerts: true,
-        'bstack:options': {
-            os: 'Windows',
-            osVersion: '10',
-        },
     }],
     logLevel: 'warn',
     bail: 0,
