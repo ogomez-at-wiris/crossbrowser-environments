@@ -3,19 +3,22 @@ dotenv.config();
 
 export const config = {
     runner: 'local',
+    hostname: "trial.perfectomobile.com",
+    path: "/nexperience/perfectomobile/wd/hub",
+    port: 443,
+    protocol: "https",
     specs: [
         './test/specs/**/*.js'
     ],
     exclude: [
     ],
-    maxInstances: 10,
+    maxInstances: 1,
     capabilities: [{
-        maxInstances: 5,
+        platformName: 'Windows',
         browserName: 'chrome',
-        acceptInsecureCerts: true,
-        'bstack:options': {
-            os: 'Windows',
-            osVersion: '10',
+        browserVersion: 'latest',
+        'perfecto:options': {
+            securityToken: process.env.PERFECTO_TOKEN,
         },
     }],
     logLevel: 'warn',
