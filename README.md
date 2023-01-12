@@ -6,5 +6,7 @@ Please use the following branches to get started (ask for credentials or look th
 
 - browserstack
 - local
+- lambda
+- perfecto
 
 For more info use QAAutomation channel.
