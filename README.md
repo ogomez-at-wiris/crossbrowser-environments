@@ -8,8 +8,9 @@ Please use the following branches to get started (the .env file is in QA Automat
 - local
 - lambda
 - perfecto
+- saucelabs
 
-To run the test, use `npm test` once you switched to the branch.
+To run the test, don't forget to `npm install` when you switch to a new branch, then use `npm test` once you switched to the branch.
 
 then  you can look at each platform's dashboard to see the results. The credentials to each platform can be found in the google docs document for the initiative, here:
 [Document](https://docs.google.com/document/d/1W3J4-xUk8dkuvRm8dVPYiL6lyYrcnbc-neAW9eW0CEc/edit)
