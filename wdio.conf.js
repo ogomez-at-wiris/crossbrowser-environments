@@ -12,7 +12,7 @@ export const config = {
         browserName: 'chrome',
         acceptInsecureCerts: true
     }],
-    logLevel: 'warn',
+    logLevel: 'error',
     bail: 0,
     waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
@@ -20,7 +20,7 @@ export const config = {
     services: ['chromedriver'],
 
     framework: 'mocha',
-    reporters: ['spec'],
+    // reporters: ['spec'],
 
     mochaOpts: {
         ui: 'bdd',

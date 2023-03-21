@@ -2432,7 +2432,7 @@ gaze@^1.1.2:
 
 geckodriver@^3.2.0:
   version "3.2.0"
-  resolved "https://registry.npmjs.org/geckodriver/-/geckodriver-3.2.0.tgz"
+  resolved "https://registry.yarnpkg.com/geckodriver/-/geckodriver-3.2.0.tgz#6b0a85e2aafbce209bca30e2d53af857707b1034"
   integrity sha512-p+qR2RKlI/TQoCEYrSuTaYCLqsJNni96WmEukTyXmOmLn+3FLdgPAEwMZ0sG2Cwi9hozUzGAWyT6zLuhF6cpiQ==
   dependencies:
     adm-zip "0.5.9"
