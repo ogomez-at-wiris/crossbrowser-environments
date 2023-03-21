@@ -12,14 +12,25 @@ describe('Wiris Quizzes demo page', () => {
         await browser.keys('1');
         await browser.$('#wrsUI_basicRandomVariableMax0').click();
         await browser.keys('10');
-        await browser.pause(6000)
-        //await browser.$('#wrsUI_mainMathField > div > div > div.wrs_formulaDisplayWrapper > div.wrs_formulaDisplay > span.wrs_container').click();
+        //await browser.pause(6000)
         const editor = await browser.$('#wrsUI_mainMathField > div > div > div.wrs_formulaDisplayWrapper > div.wrs_formulaDisplay > div > input');
+        editor.waitForDisplayed();
         editor.click();
         await browser.pause(1000);
         await browser.keys(['Control', 'a']);
         await browser.keys('Delete');
-        await browser.debug();
-
+        //await browser.debug();
+        await browser.pause(6000);
+        await browser.keys('#sol');
+        await browser.pause(6000);
+        await browser.$('#wrsUI_variableOptionsButton').click();
+        await browser.pause(4000);
+        /*const calcMe = await browser.$('##wrsUI_variableOptionsCalcMe > div > div.wrsUI_component.wrsUI_panel.wrsUI_flowPanel.wrsUI_flowPanelTopToBottom.wrsUI_sheetBox.wrsUI_borderPanelAtWest > div > div.wrsUI_component.wrsUI_panel.wrsUI_flowPanel.wrsUI_flowPanelLeftToRight.wrsUI_sheetItems > div.wrsUI_component.wrsUI_panel.wrsUI_flowPanel.wrsUI_flowPanelLeftToRight > div.wrsUI_calcSheet > div > div > div.wrsUI_container.wrsUI_lineMain.wrsUI_currentChild > div > div > div > div.CodeMirror-scroll > div.CodeMirror-sizer > div > div > div > div.CodeMirror-code');
+        calcMe.waitForDisplayed();
+        calcMe.click();
+        await browser.pause(1000);
+        await browser.keys(['Control', 'a']);
+        await browser.keys('Delete');
+        await browser.pause(6000);*/
     });
 });
